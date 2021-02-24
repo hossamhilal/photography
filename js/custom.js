@@ -1,5 +1,5 @@
 /*global $ */
-(function($) {
+(function ($) {
     "use strict";
 
     // $(window).on('load', function(){
@@ -43,7 +43,7 @@
     //     $('.dropDown').removeClass('open');
     // });
 
-    
+
     // Header OWL 
     let owlHeader = $('.owlHeader');
     owlHeader.owlCarousel({
@@ -53,9 +53,9 @@
         nav: true,
         dots: false,
         center: true,
-        autoplaySpeed : 2000,
-        autoplayTimeout : 2000,
-        smartSpeed: 2000 ,
+        autoplaySpeed: 2000,
+        autoplayTimeout: 2000,
+        smartSpeed: 2000,
         navText: ["<i class='icofont-simple-right'></i>", "<i class='icofont-simple-left'></i>"],
         responsive: {
             0: {
@@ -69,6 +69,28 @@
             }
         }
     });
+
+    // window.addEventListener("load", init);
+    // function init() {
+    //     const width =  $('.owlHeader').width();
+    //     const halfWidth = width / 2;
+
+    //     console.log('width :' , width)
+    //     console.log('halfWidth :' , halfWidth)
+
+    //     $('.owlHeader').on("mousemove", function (e) {
+    //         const xPos = e.pageX -  $('.owlHeader').width();
+
+    //         console.log('xPos :' , xPos)
+    //         $(this).removeClass('cursor-prev cursor-next');
+
+    //         if (xPos > halfWidth) {
+    //             $(this).addClass('cursor-next').removeClass('cursor-prev');
+    //         } else {
+    //             $(this).addClass('cursor-prev').removeClass('cursor-next');
+    //         }
+    //     });
+    // }
 
     // $('.owlHeader .owl-dot').each(function () {
     //     $(this).children('span').text('0' + ($(this).index() + 1));
@@ -178,6 +200,6 @@
 
     // iniat WOW Js
     new WOW().init();
-   
+
 })(jQuery);
 
