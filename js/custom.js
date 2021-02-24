@@ -14,6 +14,7 @@
     $('.menu-btn ').on('click', function(){
         $(this).toggleClass('animate');
         $('.side-menu').toggleClass('show');
+        $('.overlay').toggleClass('show');
         $('.page-content').toggleClass('translated');  
     });
 

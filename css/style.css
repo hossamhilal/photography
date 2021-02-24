@@ -214,7 +214,7 @@ h5 {
     display: none;
 }
 
-.side-menu {
+.mobile {
     display: none;
 }
 
@@ -240,7 +240,7 @@ h5 {
         height: 100vh;
         background: #000;
         display: block;
-        transition: all .5s ease-in-out;
+        transition: all .4s ease-in-out;
         transform: translateX(100%);
     }
 
@@ -311,6 +311,10 @@ h5 {
         display: none;
     }
 
+    .mobile {
+        display: flex;
+    }
+
     .menu-btn {
         width: 20px;
         height: 15px;
@@ -320,6 +324,7 @@ h5 {
         justify-content: space-between;
         margin-left: 40px;
         cursor: pointer;
+        z-index: 999;
     }
 
     .menu-btn span {
@@ -327,6 +332,10 @@ h5 {
         height: 2px;
         width: 100%;
         transition: all .5s ease-in-out;
+    }
+
+    .menu-btn.animate span {
+        background: #fff;
     }
 
     .menu-btn.animate span:first-of-type {
@@ -343,8 +352,25 @@ h5 {
         transform: rotate(45deg) translate(-3px, -8px);
     }
 
+    .overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,.8);
+        opacity: 0;
+        visibility: hidden;
+        transition: all .4s ease-in-out;
+    }
+    
+    .overlay.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
     .page-content {
-        transition: all .5s ease-in-out;
+        transition: all .4s ease-in-out;
     }
 
     .translated {
