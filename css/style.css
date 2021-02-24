@@ -251,11 +251,11 @@ h5 {
     left: 0;
 }
 
-.slider .owl-prev:hover {
+.slider .owl-prev {
     cursor: url('../images/right.png'), auto;
 }
 
-.slider .owl-next:hover {
+.slider .owl-next {
     cursor: url('../images/left.png'), auto;
 }
 
