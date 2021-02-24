@@ -155,7 +155,7 @@ h5 {
 .dropDown::after {
     content: "\eac8";
     font-family: IcoFont !important;
-    color: #fff;
+    margin-inline-start: -10px;
 }
 
 .sub-menu {
@@ -284,6 +284,8 @@ h5 {
         position: absolute;
         right: 12px;
         top: 16px;
+        color: #fff;
+        margin-inline-start: 0;
     }
 
     .side-menu a {
