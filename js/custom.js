@@ -2,6 +2,7 @@
 (function ($) {
     "use strict";
 
+    // Loader
     $(window).on('load', function(){
         $('body').addClass('stopScroll');
         $('.loader').fadeOut(500, function () {
