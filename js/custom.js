@@ -24,7 +24,6 @@
     });
 
     $(window).on('scroll', function(){
-        // let sticky = $('.abou').offset().top;
         let sticky = 200;
         if ($(window).scrollTop() >= sticky) {
             $('.header').addClass('sticky');
@@ -56,6 +55,18 @@
                 items: 1
             }
         }
+    });
+
+    // Scroll Top
+    let wheight = $(document).height() / 3;
+    $(window).scroll(function(){
+        if ($(window).scrollTop() > wheight) $('.scroll-top').addClass('show');
+        else $('.scroll-top').removeClass('show');
+    });
+
+    $('.scroll-top').click(function() {
+        $("html, body").animate({ scrollTop: 0 }, 4000);
+        return false;
     });
 
     // $(window).on("load", function(){
@@ -100,57 +111,6 @@
     //         }
     //     }
     // });
-
-    // Partners OWL 
-    // $('.owlPartners').owlCarousel({
-    //     margin: 20,
-    //     autoplay: true,
-    //     loop: true,
-    //     nav: false,
-    //     dots: false,
-    //     center : false ,
-    //     autoplaySpeed : 5000,
-    //     autoplayTimeout : 5000,
-    //     smartSpeed: 5000 ,
-    //     navText: ["<i class='icofont-thin-right'></i>", "<i class='icofont-thin-left'></i>"],
-    //     responsive: {
-    //         0: {
-    //             items: 1
-    //         },
-    //         600: {
-    //             items: 3
-    //         },
-    //         1000: {
-    //             items: 4
-    //         }
-    //     }
-    // });
-
-    // Clients OWL 
-    // $('.owlClients').owlCarousel({
-    //     margin: 20,
-    //     autoplay: true,
-    //     loop: true,
-    //     nav: true,
-    //     dots: false,
-    //     center : false ,
-    //     autoplaySpeed : 5000,
-    //     autoplayTimeout : 5000,
-    //     smartSpeed: 5000 ,
-    //     navText: ["<i class='icofont-thin-right'></i>", "<i class='icofont-thin-left'></i>"],
-    //     responsive: {
-    //         0: {
-    //             items: 1
-    //         },
-    //         600: {
-    //             items: 3
-    //         },
-    //         1000: {
-    //             items: 4
-    //         }
-    //     }
-    // });
-
 
     // // Upload File 
     // $('.uploadFile').on('change', function(e) {

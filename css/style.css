@@ -214,6 +214,7 @@ h5 {
     display: none;
 }
 
+.side-menu ,
 .mobile {
     display: none;
 }
@@ -911,11 +912,34 @@ h5 {
 }
 
 /*==========================||---------------------------||========================*/
-/*==========================||           Partners        ||========================*/
+/*==========================||        Scroll to top       ||========================*/
 /*==========================||---------------------------||========================*/
 
-@media screen and (max-width:768px) {
+.scroll-top {
+    background: #acadaf;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    opacity: 0.8;
+    visibility: hidden;
+    transition: all .5s ease-in-out;
+    transform: scale(0);
+}
 
+.scroll-top.show {
+    visibility: visible;
+    transform: scale(1);
+}
+
+.scroll-top:hover {
+    background: #fff;
+    color: #000;
 }
 
 /*==========================||---------------------------||========================*/
