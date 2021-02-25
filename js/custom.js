@@ -2,13 +2,13 @@
 (function ($) {
     "use strict";
 
-    // $(window).on('load', function(){
-    //     $('body').addClass('stopScroll');
-    //     $('.loader').fadeOut(500, function () {
-    //         $(this).remove();
-    //         $('body').removeClass('stopScroll');
-    //     }); 
-    // });
+    $(window).on('load', function(){
+        $('body').addClass('stopScroll');
+        $('.loader').fadeOut(500, function () {
+            $(this).remove();
+            $('body').removeClass('stopScroll');
+        }); 
+    });
 
     // OPEN SIDE  MENU 
     $('.menu-btn ').on('click', function(){
