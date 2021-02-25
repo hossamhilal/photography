@@ -226,7 +226,7 @@ h5 {
     }
 
     .logo img {
-        max-width: 50px;
+        max-width: 90px;
     }
 
     .header .nav-menu {
@@ -376,6 +376,26 @@ h5 {
 
     .translated {
         transform: translateX(-270px);
+    }
+}
+
+@media (min-width: 992px) and (max-width:1024px) {
+    .header , 
+    .nav-menu>ul {
+        height: 70px;
+    }
+
+    .nav-menu a {
+        padding: 15px 10px;
+        font-size: 11px;
+    }
+    
+    .logo img {
+        max-height: 50px;
+    }
+    
+    .phone {
+        font-size: 13px;
     }
 }
 
@@ -943,17 +963,213 @@ h5 {
 }
 
 /*==========================||---------------------------||========================*/
-/*==========================||          Subscribe        ||========================*/
+/*==========================||       Internal Page       ||========================*/
 /*==========================||---------------------------||========================*/
+
+.blocks {
+    padding: 50px 0;
+}
+
+.block {
+    padding: 50px 0;
+}
+
+.block:nth-child(even) .row {
+    flex-direction: row-reverse;
+}
+
+.block h3 {
+    font-size: 20px;
+    color: #000102;
+    margin-bottom: 10px;
+}
+
+.block h4 {
+    color: #8e9296;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.block p {
+    font-size: 13px;
+    letter-spacing: 0;
+    text-transform: capitalize;
+    color: #717171;
+    line-height: 1.8;
+}
 
 
 @media screen and (max-width:768px) {
-
+    .blocks {
+        padding: 20px 0;
+    }
+    
+    .block {
+        padding: 15px 0;
+    }
+    
+    .block img {
+        margin-bottom: 15px;
+    }
+    
+    .block h3 {
+        font-size: 16px;
+    }
+    
+    .block h4 {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    
+    .block p {
+        font-size: 12px;
+    }
 }
 
 /*==========================||---------------------------||========================*/
-/*==========================||           Clients         ||========================*/
+/*==========================||            Gallery        ||========================*/
 /*==========================||---------------------------||========================*/
+
+.gallery {
+    padding: 90px 0 0 0;
+}
+
+.gallery .row {
+    margin: 0;
+}
+
+.gallery .col-12 {
+    padding: 0;
+}
+
+.gallery-text {
+    background: #000102;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.gallery-text h3 {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.gallery-text h4 {
+    font-size: 13px;
+    text-transform: capitalize;
+    letter-spacing: 0;
+}
+
+.gallery-text:hover {
+    color: #fff;
+}
+
+.gallery-image {
+    position: relative;
+    height: 100%;
+    min-height: 360px;
+    position: relative;
+}
+
+.gallery-image::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-left: 20px solid #000102;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 10px);
+}
+
+.gallery-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.gallery-hover a {
+    color: #000;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin: 0 5px;
+    transform: translateY(-100px)scale(0);
+    transition: all .4s ease-in-out;
+}
+
+.gallery-hover a:hover {
+    color: #b4b4b4;
+}
+
+.gallery-image:hover a {
+    transform: translateY(0)scale(1);
+}
+
+.gallery >.row > .col-12:nth-child(3n) .row ,
+.gallery >.row > .col-12:nth-child(4n) .row ,
+.gallery >.row > .col-12:nth-child(7n) .row  {
+    flex-direction: row-reverse;
+}
+
+.gallery >.row > .col-12:nth-child(3n-1) .gallery-text , 
+.gallery >.row > .col-12:nth-child(3n) .gallery-text ,
+.gallery >.row > .col-12:nth-child(7n) .gallery-text {
+    background: #787b7d;
+}
+
+.gallery >.row > .col-12:nth-child(3n-1) .gallery-image::after , 
+.gallery >.row > .col-12:nth-child(3n) .gallery-image::after ,
+.gallery >.row > .col-12:nth-child(7n) .gallery-image::after {
+    border-left-color: #787b7d;
+}
+
+.gallery >.row > .col-12:nth-child(3n) .gallery-image::after , 
+.gallery >.row > .col-12:nth-child(4n) .gallery-image::after ,
+.gallery >.row > .col-12:nth-child(7n) .gallery-image::after{
+    left: auto;
+    right: 0;
+    transform: rotate(180deg);
+}
+
+.gallery >.row > .col-12:nth-child(6n) .row  {
+    flex-direction: row;
+} 
+
+.gallery >.row > .col-12:nth-child(6n) .gallery-image::after  {
+    left: 0;
+    right: auto;
+    transform: rotate(0deg);
+    border-left-color: #000102;
+}
+
+.gallery >.row > .col-12:nth-child(6n) .gallery-text ,
+.gallery >.row > .col-12:nth-child(8n) .gallery-text {
+    background: #000102;
+}
+
+.gallery >.row > .col-12:nth-child(8n) .gallery-image::after {
+    border-left-color: #000102;
+}
 
 
 @media screen and (max-width:768px) {
