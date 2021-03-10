@@ -1231,6 +1231,82 @@ h5 {
 
 
 /*==========================||---------------------------||========================*/
+/*==========================||        Page Slider        ||========================*/
+/*==========================||---------------------------||========================*/
+
+.page-slider {
+    padding: 80px 0;
+}
+
+.page-owl .owl-stage {
+    display: flex;
+}
+
+.page-owl .item {
+    display: flex;
+    flex: 1 0 auto;
+    height: 100%;
+}
+
+.page-thumbs {
+    padding: 30px 0 0 0;
+}
+
+.page-thumbs .owl-item {
+    opacity: .2;
+}
+
+.page-thumbs .owl-item.center {
+    opacity: 1;
+}
+
+.page-thumbs .owl-item.synced {
+    opacity: 1;
+}
+
+.page-thumbs .item {
+    height: 130px;
+}
+
+.page-owl .owl-nav div {
+    width: 55px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    color: #fff;
+    font-size: 40px;
+    position: absolute;
+    top: calc( 50% - 50px );
+    opacity: .5;
+}
+
+.page-owl .owl-nav div:hover {
+    opacity: 1;
+}
+
+.page-owl .owl-nav .owl-prev {
+    right: 0;
+}
+
+.page-owl .owl-nav .owl-next {
+    left: 0;
+} 
+
+@media screen and (max-width:768px) {
+    .page-thumbs {
+        display: none !important;
+    }
+}
+
+@media (min-width:992px) and (max-width: 1200px) {
+    .page-thumbs .item {
+        height: 90px;
+    }
+}
+
+/*==========================||---------------------------||========================*/
 /*==========================||           Loader          ||========================*/
 /*==========================||---------------------------||========================*/
 
